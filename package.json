@@ -1,4 +1,5 @@
 {
+  "homepage": "https://robertsbaer.github.io/react-clock-neumorphic/",
   "name": "react",
   "version": "1.0.0",
   "description": "React example starter project",
@@ -25,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
