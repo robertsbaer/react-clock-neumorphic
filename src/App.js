@@ -29,10 +29,23 @@ const App = () => {
 
   const getRotation = (unit, max) => {
     const time = new Date();
-    const value = time[`get${unit}`]();
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const seconds = time.getSeconds();
+    let value;
+  
+    if (unit === "Hours") {
+      value = hours + minutes / 60 + seconds / 3600;
+    } else if (unit === "Minutes") {
+      value = minutes + seconds / 60;
+    } else {
+      value = seconds;
+    }
+  
     const rotation = (value * 360) / max;
     return rotation;
   };
+  
 
   const renderNumbers = () => {
     const numbers = [];
